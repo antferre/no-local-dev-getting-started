@@ -4,12 +4,12 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 
-class User < ActiveRecord::Base
+class Contact < ActiveRecord::Base
   self.table_name = 'connect.user'
 end
 
-get "/users" do
-  @users = User.all
+get "/contacts" do
+  @contacts = Contact.all
   erb :index
 end
 
